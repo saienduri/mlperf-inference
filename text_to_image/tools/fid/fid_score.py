@@ -31,7 +31,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-
+import sys
+import pathlib
+import os
+sys.path.append(os.path.dirname(__file__))
 from inception import InceptionV3
 from torch.nn.functional import adaptive_avg_pool2d
 from scipy import linalg
@@ -42,11 +45,6 @@ import random
 import numpy as np
 from typing import Any
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
-import pathlib
-import os
-import sys
-
-sys.path.append(os.path.dirname(__file__))
 
 
 try:
